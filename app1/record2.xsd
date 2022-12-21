@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="head">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="unbounded" ref="Transaction"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="BeneficiaryBank" type="xsd:string"/>
+  <xsd:element name="TransactionReference" type="xsd:string"/>
+  <xsd:element name="Transaction">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="TransactionReference"/>
+        <xsd:element ref="UserReference"/>
+        <xsd:element ref="Amount"/>
+        <xsd:element ref="BeneficiaryBank"/>
+        <xsd:element ref="BeneficiaryAccount"/>
+        <xsd:element ref="BeneficiaryName"/>
+        <xsd:element ref="BeneficiaryId"/>
+        <xsd:element ref="BeneficiaryIdType"/>
+        <xsd:element ref="PurposeOfTransfer"/>
+        <xsd:element ref="DetailsOfPayments"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="PurposeOfTransfer" type="xsd:string"/>
+  <xsd:element name="Amount" type="xsd:string"/>
+  <xsd:element name="BeneficiaryName" type="xsd:string"/>
+  <xsd:element name="BeneficiaryIdType" type="xsd:string"/>
+  <xsd:element name="DetailsOfPayments" type="xsd:string"/>
+  <xsd:element name="UserReference" type="xsd:string"/>
+  <xsd:element name="BeneficiaryAccount" type="xsd:string"/>
+  <xsd:element name="BeneficiaryId" type="xsd:string"/>
+</xsd:schema>
